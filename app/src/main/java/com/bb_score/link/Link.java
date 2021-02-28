@@ -1,4 +1,6 @@
-package main.java.com.bb_score;
+package java.com.bb_score.link;
+
+import main.java.com.bb_score.Player;
 
 public class Link {
     private final String id;
