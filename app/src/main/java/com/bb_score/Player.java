@@ -1,4 +1,8 @@
 package main.java.com.bb_score;
 
-public class Player {
+public enum Player {
+    ORANGE,
+    RED,
+    PURPLE,
+    YELLOW
 }
