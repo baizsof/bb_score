@@ -3,13 +3,15 @@ package main.java.com.bb_score;
 public class IndustryFacility {
     private final IndustryFacilityType type;
     private final int level;
-    private final int point;
+    private final int basePoint;
+    private final int linkPoint;
     private final Player owner;
 
-    public IndustryFacility(IndustryFacilityType type, int level, int point, Player owner) {
+    public IndustryFacility(IndustryFacilityType type, int level, int basePoint, int linkPoint, Player owner) {
         this.type = type;
         this.level = level;
-        this.point = point;
+        this.basePoint = basePoint;
+        this.linkPoint = linkPoint;
         this.owner = owner;
     }
 
@@ -21,8 +23,12 @@ public class IndustryFacility {
         return level;
     }
 
-    public int getPoint() {
-        return point;
+    public int getBasePoint() {
+        return basePoint;
+    }
+
+    public int getLinkPoint() {
+        return linkPoint;
     }
 
     public Player getOwner() {
