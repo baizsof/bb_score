@@ -1,4 +1,4 @@
-package java.com.bb_score.industry_facility;
+package com.bb_score.industry_facility;
 
 public enum IndustryFacilityType {
     MANUFACTURER,

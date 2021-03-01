@@ -1,12 +1,12 @@
-package java.com.bb_score.location;
+package com.bb_score.location;
 
-import java.com.bb_score.link.Link;
-import java.com.bb_score.industry_facility.IndustryFacility;
+import com.bb_score.link.Link;
+import com.bb_score.industry_facility.IndustryFacility;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-import main.java.com.bb_score.Player;
+import main.com.bb_score.Player;
 
 public class Location {
     private final String name;

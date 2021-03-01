@@ -1,13 +1,13 @@
-package java.com.bb_score.industry_facility;
+package com.bb_score.industry_facility;
 
-import main.java.com.bb_score.Player;
+import main.com.bb_score.Player;
 
 public class IndustryFacility {
     private final IndustryFacilityType type;
     private final int level;
     private final int basePoint;
     private final int linkPoint;
-    private final main.java.com.bb_score.Player owner;
+    private final main.com.bb_score.Player owner;
 
     public IndustryFacility(IndustryFacilityType type, int level, int basePoint, int linkPoint, Player owner) {
         this.type = type;

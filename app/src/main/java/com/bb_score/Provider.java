@@ -1,4 +1,4 @@
-package java.com.bb_score;
+package com.bb_score;
 
 import java.util.HashMap;
 import java.util.Map;

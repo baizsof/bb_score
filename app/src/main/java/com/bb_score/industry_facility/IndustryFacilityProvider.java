@@ -1,7 +1,7 @@
-package java.com.bb_score.industry_facility;
+package com.bb_score.industry_facility;
 
-import java.com.bb_score.Deserializer;
-import java.com.bb_score.Provider;
+import com.bb_score.Deserializer;
+import com.bb_score.Provider;
 
 
 public class IndustryFacilityProvider extends Provider<IndustryFacility> {

@@ -1,4 +1,4 @@
-package java.com.bb_score.merchant_point;
+package com.bb_score.merchant_point;
 
 public class MerchantPoint {
     private final String name;

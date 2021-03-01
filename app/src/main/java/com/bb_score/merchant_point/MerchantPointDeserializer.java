@@ -1,6 +1,6 @@
-package java.com.bb_score.merchant_point;
+package com.bb_score.merchant_point;
 
-import java.com.bb_score.Deserializer;
+import com.bb_score.Deserializer;
 import java.util.Set;
 
 public class MerchantPointDeserializer implements Deserializer<MerchantPoint> {
