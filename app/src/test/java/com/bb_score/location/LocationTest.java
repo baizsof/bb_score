@@ -1,15 +1,68 @@
 package com.bb_score.location;
 
+import com.bb_score.NoOwnerAssignedException;
+import com.bb_score.Player;
+import com.bb_score.industry_facility.IndustryFacility;
+import com.bb_score.industry_facility.IndustryFacilityType;
+import com.bb_score.link.Link;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Optional;
 
 class LocationTest {
+    private Location location1;
+    private IndustryFacility facility1;
+    private IndustryFacility facility2;
+
 
     @BeforeEach
     void setUp() {
+        location1 = new Location("Lo1",
+                new HashSet<Link>(Arrays.asList(new Link("1"),
+                        new Link("2"))),
+                1);
+        facility1 = new IndustryFacility(IndustryFacilityType.COAL_MINE,
+                1,
+                1,
+                1);
+        facility2 = new IndustryFacility(IndustryFacilityType.COAL_MINE,
+                2,
+                1,
+                1);
     }
 
     @AfterEach
     void tearDown() {
+        location1 = null;
+        facility1 = null;
+        facility2 = null;
+    }
+
+    @Test
+    void whenLocationIsFullWithIndustryFacilitiesExceptionIsThrown() throws NoMoreIndustryFacilityPlaceAtLocationException, NoOwnerAssignedException {
+        facility1.setOwner(Player.ORANGE);
+        facility2.setOwner(Player.PURPLE);
+        location1.addIndustryFacility(facility1);
+        Assertions.assertThrows(NoMoreIndustryFacilityPlaceAtLocationException.class, () -> location1.addIndustryFacility(facility2));
+    }
+
+    @Test
+    void whenIndustryFacilityWantedToBeAddedToLocationButNoOwnerAssignedExceptionIsThrown() {
+        Assertions.assertEquals(Optional.empty(), facility1.getOwner());
+        Assertions.assertThrows(NoOwnerAssignedException.class, () -> location1.addIndustryFacility(facility1));
+    }
+
+    @Test
+    void doValidBasePointCalculation() throws NoMoreIndustryFacilityPlaceAtLocationException, NoOwnerAssignedException {
+        facility1.setOwner(Player.ORANGE);
+        location1.addIndustryFacility(facility1);
+        Map<Player, Integer> baseScores = location1.calculateBasePoints();
+        Assertions.assertEquals(Optional.of(facility1.getBasePoint()).get(), baseScores.get(Player.ORANGE));
     }
 }
