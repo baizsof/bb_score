@@ -1,7 +1,8 @@
 package com.bb_score.location;
 
-import com.bb_score.NoOwnerAssignedException;
 import com.bb_score.Player;
+import com.bb_score.exception.NoMoreIndustryFacilityPlaceAtLocationException;
+import com.bb_score.exception.NoOwnerAssignedException;
 import com.bb_score.industry_facility.IndustryFacility;
 import com.bb_score.industry_facility.IndustryFacilityType;
 import com.bb_score.link.Link;
