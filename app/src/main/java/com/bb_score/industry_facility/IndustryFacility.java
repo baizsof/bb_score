@@ -6,6 +6,7 @@ import com.bb_score.Player;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Objects;
+import java.util.Optional;
 import java.util.StringJoiner;
 
 public class IndustryFacility {
@@ -17,16 +18,18 @@ public class IndustryFacility {
     private int basePoint;
     @JsonProperty("linkPoint")
     private int linkPoint;
-    private Player owner;
+    private Optional<Player> owner;
 
     public IndustryFacility() {
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public IndustryFacility(IndustryFacilityType type, int level, int basePoint, int linkPoint) {
         this.type = type;
         this.level = level;
         this.basePoint = basePoint;
         this.linkPoint = linkPoint;
+        this.owner = Optional.empty();
     }
 
     public IndustryFacilityType getType() {
@@ -42,8 +45,13 @@ public class IndustryFacility {
         return new StringJoiner("_").add(type.name()).add(String.valueOf(level)).toString();
     }
 
-    public Player getOwner() {
-        return owner;
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public Optional<Player> getOwner() {
+        if(owner.isPresent()){
+            return owner;
+        } else {
+            return Optional.empty();
+        }
     }
 
     @Override
@@ -68,7 +76,8 @@ public class IndustryFacility {
         return linkPoint;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public void setOwner(Player owner) {
-        this.owner = owner;
+        this.owner = Optional.ofNullable(owner);
     }
 }
