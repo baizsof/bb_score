@@ -1,28 +1,23 @@
 package com.bb_score;
 
-import java.util.HashMap;
+import com.bb_score.deserializer.Deserializer;
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Map;
-import java.util.Set;
+
 
 public abstract class Provider<T> {
-    private final Deserializer<T> deserializer;
-    private final Map<String, T> list;
+    protected final Deserializer<T> deserializer;
+    private final Map<String, T> map;
 
     public Provider(Deserializer<T> deserializer) {
         this.deserializer = deserializer;
-        list = loadData();
+        map = loadData();
     }
 
-    private Map<String, T> loadData() {
-        Map<String, T> map = new HashMap<>();
-        Set<T> elements = deserializer.get();
-        for (T element : elements) {
-            map.put(createUniqueID(element), element);
-        }
-        return map;
+    protected abstract Map<String, T> loadData();
+
+    public T get(@NotNull String id) {
+        return map.get(id);
     }
-
-    protected abstract String createUniqueID(T element);
-
-
 }

@@ -1,8 +1,9 @@
 package com.bb_score.link;
 
-import main.com.bb_score.Player;
+import com.bb_score.Element;
+import com.bb_score.Player;
 
-public class Link {
+public class Link implements Element {
     private final String id;
     private Player owner;
 
@@ -21,5 +22,10 @@ public class Link {
 
     public void setOwner(Player owner) {
         this.owner = owner;
+    }
+
+    @Override
+    public String getID() {
+        return id;
     }
 }

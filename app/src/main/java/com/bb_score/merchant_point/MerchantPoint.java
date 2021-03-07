@@ -1,6 +1,8 @@
 package com.bb_score.merchant_point;
 
-public class MerchantPoint {
+import com.bb_score.Element;
+
+public class MerchantPoint implements Element {
     private final String name;
     private final String linkPoint;
 
@@ -15,5 +17,10 @@ public class MerchantPoint {
 
     public String getLinkPoint() {
         return linkPoint;
+    }
+
+    @Override
+    public String getID() {
+        return name;
     }
 }

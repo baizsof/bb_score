@@ -1,4 +1,4 @@
-package main.com.bb_score;
+package com.bb_score;
 
 public enum Player {
     ORANGE,
