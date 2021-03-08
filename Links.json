@@ -1,0 +1,21 @@
+[   
+    {
+        "id": "1",
+        "locations": ["STOKE-ON-TRENT", "WARRINGTON"]
+    }, {
+        "id": "2",
+        "locations": ["STOKE-ON-TRENT", "LEEK"]
+    }, {
+        "id": "3",
+        "locations": ["STOKE-ON-TRENT", "STONE"]
+    }, {
+        "id": "4",
+        "locations": ["LEEK", "BELPER"]
+    }, {
+        "id": "5",
+        "locations": ["BELPER", "DERBY"]
+    }, {
+        "id": "6",
+        "locations": ["DERBY", "NOTTINGHAM"]
+    },
+]
