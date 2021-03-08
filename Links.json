@@ -17,5 +17,20 @@
     }, {
         "id": "6",
         "locations": ["DERBY", "NOTTINGHAM"]
+    }, {
+        "id": "7",
+        "locations": ["DERBY", "BURTON-ON-TRENT"]
+    }, {
+        "id": "8",
+        "locations": ["DERBY", "UTTOXETER"]
+    }, {
+        "id": "9",
+        "locations": ["STONE", "UTTOXETER"]
+    }, {
+        "id": "10",
+        "locations": ["STONE", "STAFFORD"]
+    }, {
+        "id": "11",
+        "locations": ["CANNOCK", "STAFFORD"]
     },
 ]
