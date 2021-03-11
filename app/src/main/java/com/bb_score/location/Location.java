@@ -17,6 +17,8 @@ public class Location {
     private String name;
     @JsonProperty("maxNumberOfIndustryFacility")
     private int maxNumberOfIndustryFacility;
+    @JsonProperty("slots")
+    private String[][] slots;
 
     private final Set<IndustryFacility> industryFacilities = new HashSet<>();
 

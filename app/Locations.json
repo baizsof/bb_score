@@ -1,6 +1,11 @@
 [{
         "name": "STOKE-ON-TRENT",
-        "maxNumberOfIndustryFacility": 3
+        "maxNumberOfIndustryFacility": 3,
+		"slots": [
+		["IRON_WORK", "BREWERY"],
+		["IRON_WORK", "BREWERY"],
+		["IRON_WORK", "BREWERY"]
+        ]
     }, {
         "name": "LEEK",
         "maxNumberOfIndustryFacility": 2
