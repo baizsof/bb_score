@@ -3,18 +3,18 @@ package com.bb_score.location;
 import com.bb_score.Player;
 import com.bb_score.exception.NoMoreIndustryFacilityPlaceAtLocationException;
 import com.bb_score.exception.NoOwnerAssignedException;
+import com.bb_score.exception.NoSuchIndustryFacilityTypeAtLocation;
 import com.bb_score.industry_facility.IndustryFacility;
 import com.bb_score.industry_facility.IndustryFacilityType;
-import com.bb_score.link.Link;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-import java.util.HashSet;
 import java.util.Map;
 import java.util.Optional;
+
+import static com.bb_score.industry_facility.IndustryFacilityType.*;
 
 class LocationTest {
     private Location location1;
@@ -24,10 +24,7 @@ class LocationTest {
 
     @BeforeEach
     void setUp() {
-        location1 = new Location("Lo1",
-                new HashSet<Link>(Arrays.asList(new Link("1"),
-                        new Link("2"))),
-                1);
+        location1 = new Location("Lo1", new IndustryFacilityType[][]{{MANUFACTURER}});
         facility1 = new IndustryFacility(IndustryFacilityType.COAL_MINE,
                 1,
                 1,
@@ -46,9 +43,10 @@ class LocationTest {
     }
 
     @Test
-    void whenLocationIsFullWithIndustryFacilitiesExceptionIsThrown() throws NoMoreIndustryFacilityPlaceAtLocationException, NoOwnerAssignedException {
+    void whenLocationIsFullWithIndustryFacilitiesExceptionIsThrown() throws NoMoreIndustryFacilityPlaceAtLocationException, NoOwnerAssignedException, NoSuchIndustryFacilityTypeAtLocation {
         facility1.setOwner(Player.ORANGE);
         facility2.setOwner(Player.PURPLE);
+        location1.setSlots(new IndustryFacilityType[][]{{COAL_MINE}});
         location1.addIndustryFacility(facility1);
         Assertions.assertThrows(NoMoreIndustryFacilityPlaceAtLocationException.class, () -> location1.addIndustryFacility(facility2));
     }
@@ -60,10 +58,28 @@ class LocationTest {
     }
 
     @Test
-    void doValidBasePointCalculation() throws NoMoreIndustryFacilityPlaceAtLocationException, NoOwnerAssignedException {
+    void testExceptionRaisedWhenNoSuchIndustryTypeIsFoundAtLocation() {
+        location1.setSlots(new IndustryFacilityType[][]{{MANUFACTURER}});
+        facility1.setOwner(Player.ORANGE);
+        Assertions.assertThrows(NoSuchIndustryFacilityTypeAtLocation.class, () -> location1.addIndustryFacility(facility1));
+    }
+
+    @Test
+    void doValidBasePointCalculation() throws NoMoreIndustryFacilityPlaceAtLocationException, NoOwnerAssignedException, NoSuchIndustryFacilityTypeAtLocation {
         facility1.setOwner(Player.ORANGE);
         location1.addIndustryFacility(facility1);
         Map<Player, Integer> baseScores = location1.calculateBasePoints();
         Assertions.assertEquals(Optional.of(facility1.getBasePoint()).get(), baseScores.get(Player.ORANGE));
     }
+
+    @Test
+    void testGetMaxNumberOfIndustryFacilities() {
+        IndustryFacilityType[][] slots = new IndustryFacilityType[][]{{MANUFACTURER}, {POTTERY}};
+        int expectedLength = slots.length;
+        location1.setSlots(slots);
+        Assertions.assertEquals(expectedLength, location1.getMaxNumberOfIndustryFacility());
+    }
+
+
+
 }
