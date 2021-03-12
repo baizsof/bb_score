@@ -2,9 +2,9 @@
   {
     "name": "STOKE-ON-TRENT",
     "slots": [
-      ["IRON_WORK","BREWERY"],
-      ["IRON_WORK","BREWERY"],
-      ["IRON_WORK","BREWERY"]
+      ["COTTON_MILL","MANUFACTURER"],
+      ["POTTERY","IRON_WORK"],
+      ["MANUFACTURER"]
     ]
   },{
   "name": "LEEK",
