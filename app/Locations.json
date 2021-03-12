@@ -1,82 +1,216 @@
-[{
-        "name": "STOKE-ON-TRENT",
-        "maxNumberOfIndustryFacility": 3,
-		"slots": [
-		["IRON_WORK", "BREWERY"],
-		["IRON_WORK", "BREWERY"],
-		["IRON_WORK", "BREWERY"]
-        ]
-    }, {
-        "name": "LEEK",
-        "maxNumberOfIndustryFacility": 2
-    }, {
-        "name": "BELPER",
-        "maxNumberOfIndustryFacility": 3
-    }, {
-        "name": "DERBY",
-        "maxNumberOfIndustryFacility": 3
-    }, {
-        "name": "UTTOXETER",
-        "maxNumberOfIndustryFacility": 2
-    }, {
-        "name": "STONE",
-        "maxNumberOfIndustryFacility": 2
-    }, {
-        "name": "STAFFOR",
-        "maxNumberOfIndustryFacility": 2
-    }, {
-        "name": "CANNOCK",
-        "maxNumberOfIndustryFacility": 2
-    }, {
-        "name": "BURTON-ON-TRENT",
-        "maxNumberOfIndustryFacility": 2
-    }, {
-        "name": "TAMWORTH",
-        "maxNumberOfIndustryFacility": 2
-    }, {
-        "name": "WALSALL",
-        "maxNumberOfIndustryFacility": 2
-    }, {
-        "name": "WOLVERHAMPTON",
-        "maxNumberOfIndustryFacility": 2
-    }, {
-        "name": "COALBROOKDALE",
-        "maxNumberOfIndustryFacility": 2
-    }, {
-        "name": "DUDLEY",
-        "maxNumberOfIndustryFacility": 3
-    }, {
-        "name": "BIRMINGHAM",
-        "maxNumberOfIndustryFacility": 4
-    }, {
-        "name": "NUNEATON",
-        "maxNumberOfIndustryFacility": 2
-    }, {
-        "name": "COVENTRY",
-        "maxNumberOfIndustryFacility": 3
-    }, {
-        "name": "REDDITCH",
-        "maxNumberOfIndustryFacility": 2
-    }, {
-        "name": "WORCESTER",
-        "maxNumberOfIndustryFacility": 2
-    }, {
-        "name": "KIDDERMINSTER",
-        "maxNumberOfIndustryFacility": 2
-    }, {
-        "name": "WARRINGTON",
-        "maxNumberOfIndustryFacility": 0
-    }, {
-        "name": "NOTTINGHAM",
-        "maxNumberOfIndustryFacility": 0
-    }, {
-        "name": "OXFORD",
-        "maxNumberOfIndustryFacility": 0
-    }, {
-        "name": "GLOUCESTER",
-        "maxNumberOfIndustryFacility": 0
-    }, {
-        "name": "SHREWBURY",
-        "maxNumberOfIndustryFacility": 0
-    }
+[
+  {
+    "name": "STOKE-ON-TRENT",
+    "maxNumberOfIndustryFacility": 3,
+    "slots": [
+      ["IRON_WORK","BREWERY"],
+      ["IRON_WORK","BREWERY"],
+      ["IRON_WORK","BREWERY"]
+    ]
+  },{
+  "name": "LEEK",
+  "maxNumberOfIndustryFacility": 2,
+  "slots": [
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"]
+  ]
+},{
+  "name": "BELPER",
+  "maxNumberOfIndustryFacility": 3,
+  "slots": [
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"]
+  ]
+},{
+  "name": "DERBY",
+  "maxNumberOfIndustryFacility": 2,
+  "slots": [
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"]
+  ]
+},{
+  "name": "UTTOXETER",
+  "maxNumberOfIndustryFacility": 2,
+  "slots": [
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"]
+  ]
+},{
+  "name": "STONE",
+  "maxNumberOfIndustryFacility": 2,
+  "slots": [
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"]
+  ]
+},{
+  "name": "STAFFORD",
+  "maxNumberOfIndustryFacility": 2,
+  "slots": [
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"]
+  ]
+},{
+  "name": "CANNOCK",
+  "maxNumberOfIndustryFacility": 2,
+  "slots": [
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"]
+  ]
+},{
+  "name": "BURTON-ON-TRENT",
+  "maxNumberOfIndustryFacility": 2,
+  "slots": [
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"]
+  ]
+},{
+  "name": "TAMWORTH",
+  "maxNumberOfIndustryFacility": 2,
+  "slots": [
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"]
+  ]
+},{
+  "name": "WALSALL",
+  "maxNumberOfIndustryFacility": 2,
+  "slots": [
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"]
+  ]
+},{
+  "name": "WOLVERHAMPTON",
+  "maxNumberOfIndustryFacility": 2,
+  "slots": [
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"]
+  ]
+},{
+  "name": "COALBROOKDALE",
+  "maxNumberOfIndustryFacility": 2,
+  "slots": [
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"]
+  ]
+},{
+  "name": "DUDLEY",
+  "maxNumberOfIndustryFacility": 3,
+  "slots": [
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"]
+  ]
+},{
+  "name": "BIRMINGHAM",
+  "maxNumberOfIndustryFacility": 4,
+  "slots": [
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"]
+  ]
+},{
+  "name": "NUNEATON",
+  "maxNumberOfIndustryFacility": 2,
+  "slots": [
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"]
+  ]
+},{
+  "name": "COVENTRY",
+  "maxNumberOfIndustryFacility": 3,
+  "slots": [
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"]
+  ]
+},{
+  "name": "REDDITCH",
+  "maxNumberOfIndustryFacility": 2,
+  "slots": [
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"]
+  ]
+},{
+  "name": "WORCESTER",
+  "maxNumberOfIndustryFacility": 2,
+  "slots": [
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"]
+  ]
+},{
+  "name": "KIDDERMINSTER",
+  "maxNumberOfIndustryFacility": 2,
+  "slots": [
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"]
+  ]
+},{
+  "name": "WARRINGTON",
+  "maxNumberOfIndustryFacility": 0,
+  "slots": [
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"]
+  ]
+},{
+  "name": "NOTTINGHAM",
+  "maxNumberOfIndustryFacility": 0,
+  "slots": [
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"]
+  ]
+},{
+  "name": "OXFORD",
+  "maxNumberOfIndustryFacility": 0,
+  "slots": [
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"]
+  ]
+},{
+  "name": "GLOUCESTER",
+  "maxNumberOfIndustryFacility": 0,
+  "slots": [
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"]
+  ]
+},{
+  "name": "SHREWBURY",
+  "maxNumberOfIndustryFacility": 0,
+  "slots": [
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"],
+    ["IRON_WORK","BREWERY"]
+  ]
+},{
+  "name": "FARM1",
+  "maxNumberOfIndustryFacility": 1,
+  "slots": [
+    ["BREWERY"]
+  ]
+},
+  {
+    "name": "FARM2",
+    "maxNumberOfIndustryFacility": 1,
+    "slots": [
+      ["BREWERY"]
+    ]
+  }
 ]
