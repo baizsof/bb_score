@@ -5,14 +5,11 @@ import com.bb_score.exception.NoMoreIndustryFacilityPlaceAtLocationException;
 import com.bb_score.exception.NoOwnerAssignedException;
 import com.bb_score.industry_facility.IndustryFacility;
 import com.bb_score.industry_facility.IndustryFacilityType;
-import com.bb_score.link.Link;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-import java.util.HashSet;
 import java.util.Map;
 import java.util.Optional;
 
@@ -24,10 +21,7 @@ class LocationTest {
 
     @BeforeEach
     void setUp() {
-        location1 = new Location("Lo1",
-                new HashSet<Link>(Arrays.asList(new Link("1"),
-                        new Link("2"))),
-                1);
+        location1 = new Location("Lo1");
         facility1 = new IndustryFacility(IndustryFacilityType.COAL_MINE,
                 1,
                 1,
@@ -65,5 +59,13 @@ class LocationTest {
         location1.addIndustryFacility(facility1);
         Map<Player, Integer> baseScores = location1.calculateBasePoints();
         Assertions.assertEquals(Optional.of(facility1.getBasePoint()).get(), baseScores.get(Player.ORANGE));
+    }
+
+    @Test
+    void testGetMaxNumberOfIndustryFacilities() {
+        String[][] slots = new String[][]{{"1", "2"}, {"1"}};
+        int expectedLength = slots.length;
+        location1.setSlots(slots);
+        Assertions.assertEquals(expectedLength, location1.getMaxNumberOfIndustryFacility());
     }
 }

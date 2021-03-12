@@ -23,7 +23,7 @@ class JacksonDeserializerTest {
 
     @Test
     void testPOJOReturnedAfterLocationsJsonParsed() {
-        assertListFirstELementWithGivenPOJO("Locations.json", Location.class, new Location("STOKE-ON-TRENT", 3));
+        assertListFirstELementWithGivenPOJO("Locations.json", Location.class, new Location("STOKE-ON-TRENT"));
     }
 
     @Test

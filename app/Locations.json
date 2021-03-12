@@ -1,7 +1,6 @@
 [
   {
     "name": "STOKE-ON-TRENT",
-    "maxNumberOfIndustryFacility": 3,
     "slots": [
       ["IRON_WORK","BREWERY"],
       ["IRON_WORK","BREWERY"],
@@ -9,7 +8,6 @@
     ]
   },{
   "name": "LEEK",
-  "maxNumberOfIndustryFacility": 2,
   "slots": [
     ["IRON_WORK","BREWERY"],
     ["IRON_WORK","BREWERY"],
@@ -17,7 +15,6 @@
   ]
 },{
   "name": "BELPER",
-  "maxNumberOfIndustryFacility": 3,
   "slots": [
     ["IRON_WORK","BREWERY"],
     ["IRON_WORK","BREWERY"],
@@ -25,7 +22,6 @@
   ]
 },{
   "name": "DERBY",
-  "maxNumberOfIndustryFacility": 2,
   "slots": [
     ["IRON_WORK","BREWERY"],
     ["IRON_WORK","BREWERY"],
@@ -33,7 +29,6 @@
   ]
 },{
   "name": "UTTOXETER",
-  "maxNumberOfIndustryFacility": 2,
   "slots": [
     ["IRON_WORK","BREWERY"],
     ["IRON_WORK","BREWERY"],
@@ -41,7 +36,6 @@
   ]
 },{
   "name": "STONE",
-  "maxNumberOfIndustryFacility": 2,
   "slots": [
     ["IRON_WORK","BREWERY"],
     ["IRON_WORK","BREWERY"],
@@ -49,7 +43,6 @@
   ]
 },{
   "name": "STAFFORD",
-  "maxNumberOfIndustryFacility": 2,
   "slots": [
     ["IRON_WORK","BREWERY"],
     ["IRON_WORK","BREWERY"],
@@ -57,7 +50,6 @@
   ]
 },{
   "name": "CANNOCK",
-  "maxNumberOfIndustryFacility": 2,
   "slots": [
     ["IRON_WORK","BREWERY"],
     ["IRON_WORK","BREWERY"],
@@ -65,7 +57,6 @@
   ]
 },{
   "name": "BURTON-ON-TRENT",
-  "maxNumberOfIndustryFacility": 2,
   "slots": [
     ["IRON_WORK","BREWERY"],
     ["IRON_WORK","BREWERY"],
@@ -73,7 +64,6 @@
   ]
 },{
   "name": "TAMWORTH",
-  "maxNumberOfIndustryFacility": 2,
   "slots": [
     ["IRON_WORK","BREWERY"],
     ["IRON_WORK","BREWERY"],
@@ -81,7 +71,6 @@
   ]
 },{
   "name": "WALSALL",
-  "maxNumberOfIndustryFacility": 2,
   "slots": [
     ["IRON_WORK","BREWERY"],
     ["IRON_WORK","BREWERY"],
@@ -89,7 +78,6 @@
   ]
 },{
   "name": "WOLVERHAMPTON",
-  "maxNumberOfIndustryFacility": 2,
   "slots": [
     ["IRON_WORK","BREWERY"],
     ["IRON_WORK","BREWERY"],
@@ -97,7 +85,6 @@
   ]
 },{
   "name": "COALBROOKDALE",
-  "maxNumberOfIndustryFacility": 2,
   "slots": [
     ["IRON_WORK","BREWERY"],
     ["IRON_WORK","BREWERY"],
@@ -105,7 +92,6 @@
   ]
 },{
   "name": "DUDLEY",
-  "maxNumberOfIndustryFacility": 3,
   "slots": [
     ["IRON_WORK","BREWERY"],
     ["IRON_WORK","BREWERY"],
@@ -113,7 +99,6 @@
   ]
 },{
   "name": "BIRMINGHAM",
-  "maxNumberOfIndustryFacility": 4,
   "slots": [
     ["IRON_WORK","BREWERY"],
     ["IRON_WORK","BREWERY"],
@@ -121,7 +106,6 @@
   ]
 },{
   "name": "NUNEATON",
-  "maxNumberOfIndustryFacility": 2,
   "slots": [
     ["IRON_WORK","BREWERY"],
     ["IRON_WORK","BREWERY"],
@@ -129,7 +113,6 @@
   ]
 },{
   "name": "COVENTRY",
-  "maxNumberOfIndustryFacility": 3,
   "slots": [
     ["IRON_WORK","BREWERY"],
     ["IRON_WORK","BREWERY"],
@@ -137,7 +120,6 @@
   ]
 },{
   "name": "REDDITCH",
-  "maxNumberOfIndustryFacility": 2,
   "slots": [
     ["IRON_WORK","BREWERY"],
     ["IRON_WORK","BREWERY"],
@@ -145,7 +127,6 @@
   ]
 },{
   "name": "WORCESTER",
-  "maxNumberOfIndustryFacility": 2,
   "slots": [
     ["IRON_WORK","BREWERY"],
     ["IRON_WORK","BREWERY"],
@@ -153,7 +134,6 @@
   ]
 },{
   "name": "KIDDERMINSTER",
-  "maxNumberOfIndustryFacility": 2,
   "slots": [
     ["IRON_WORK","BREWERY"],
     ["IRON_WORK","BREWERY"],
@@ -161,7 +141,6 @@
   ]
 },{
   "name": "WARRINGTON",
-  "maxNumberOfIndustryFacility": 0,
   "slots": [
     ["IRON_WORK","BREWERY"],
     ["IRON_WORK","BREWERY"],
@@ -169,7 +148,6 @@
   ]
 },{
   "name": "NOTTINGHAM",
-  "maxNumberOfIndustryFacility": 0,
   "slots": [
     ["IRON_WORK","BREWERY"],
     ["IRON_WORK","BREWERY"],
@@ -177,7 +155,6 @@
   ]
 },{
   "name": "OXFORD",
-  "maxNumberOfIndustryFacility": 0,
   "slots": [
     ["IRON_WORK","BREWERY"],
     ["IRON_WORK","BREWERY"],
@@ -185,7 +162,6 @@
   ]
 },{
   "name": "GLOUCESTER",
-  "maxNumberOfIndustryFacility": 0,
   "slots": [
     ["IRON_WORK","BREWERY"],
     ["IRON_WORK","BREWERY"],
@@ -193,7 +169,6 @@
   ]
 },{
   "name": "SHREWBURY",
-  "maxNumberOfIndustryFacility": 0,
   "slots": [
     ["IRON_WORK","BREWERY"],
     ["IRON_WORK","BREWERY"],
@@ -201,14 +176,12 @@
   ]
 },{
   "name": "FARM1",
-  "maxNumberOfIndustryFacility": 1,
   "slots": [
     ["BREWERY"]
   ]
 },
   {
     "name": "FARM2",
-    "maxNumberOfIndustryFacility": 1,
     "slots": [
       ["BREWERY"]
     ]

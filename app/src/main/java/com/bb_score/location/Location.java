@@ -2,12 +2,10 @@ package com.bb_score.location;
 
 import android.os.Build;
 import androidx.annotation.RequiresApi;
-import com.bb_score.Element;
 import com.bb_score.Player;
 import com.bb_score.exception.NoMoreIndustryFacilityPlaceAtLocationException;
 import com.bb_score.exception.NoOwnerAssignedException;
 import com.bb_score.industry_facility.IndustryFacility;
-import com.bb_score.link.Link;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.*;
@@ -15,24 +13,20 @@ import java.util.*;
 public class Location {
     @JsonProperty("name")
     private String name;
-    @JsonProperty("maxNumberOfIndustryFacility")
-    private int maxNumberOfIndustryFacility;
     @JsonProperty("slots")
     private String[][] slots;
 
+    private int currentNumberOfIndustryFacility = 0;
     private final Set<IndustryFacility> industryFacilities = new HashSet<>();
 
     public Location() {
     }
 
-
-
-    private int currentNumberOfIndustryFacility = 0;
-
-    public Location(String name, int maxNumberOfIndustryFacility) {
+    public Location(String name) {
         this.name = name;
-        this.maxNumberOfIndustryFacility = maxNumberOfIndustryFacility;
     }
+
+
 
     public Map<Player, Integer> calculateLinkPoints() {
         throw new UnsupportedOperationException();
@@ -59,7 +53,7 @@ public class Location {
         if (facility.getOwner().equals(Optional.empty())) {
             throw new NoOwnerAssignedException();
         }
-        if (currentNumberOfIndustryFacility < maxNumberOfIndustryFacility) {
+        if (currentNumberOfIndustryFacility < getMaxNumberOfIndustryFacility()) {
             industryFacilities.add(facility);
             currentNumberOfIndustryFacility++;
         } else {
@@ -73,6 +67,18 @@ public class Location {
 
     public String getID() {
         return name.toUpperCase();
+    }
+
+    public int getMaxNumberOfIndustryFacility() {
+        return slots.length;
+    }
+
+    public String[][] getSlots() {
+        return slots;
+    }
+
+    public void setSlots(String[][] slots) {
+        this.slots = slots;
     }
 
     @Override
