@@ -44,6 +44,10 @@ public class Link {
         return id;
     }
 
+    public String[] getLocations() {
+        return locations;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
