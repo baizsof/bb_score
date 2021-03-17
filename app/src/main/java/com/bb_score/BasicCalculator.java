@@ -13,7 +13,8 @@ public class BasicCalculator implements Calculator {
     private final HashMap<String, Location> usedLocations;
     private final Set<Link> usedLinks;
 
-    public BasicCalculator(HashMap<String, Location> usedLocations, Set<Link> usedLinks) {
+    public BasicCalculator(HashMap<String, Location> usedLocations, Set<Link> usedLinks) throws IllegalArgumentException {
+        if (usedLocations == null || usedLinks == null) throw new IllegalArgumentException();
         this.usedLocations = usedLocations;
         this.usedLinks = usedLinks;
     }
