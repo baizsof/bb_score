@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
+
 class IndustryFacilitiesProviderTest {
     private static final String coal_mine_1 = "[{\n" +
             "        \"type\": \"COAL_MINE\",\n" +
@@ -25,7 +27,7 @@ class IndustryFacilitiesProviderTest {
     @BeforeEach
     void setUp() {
         JacksonDeserializer<IndustryFacility> deserializer = new JacksonDeserializer<IndustryFacility>(coal_mine_1, IndustryFacility.class);
-        provider = new IndustryFacilitiesProvider(coal_mine_1);
+        provider = new IndustryFacilitiesProvider(new File(coal_mine_1));
     }
 
     @AfterEach
