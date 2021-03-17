@@ -1,0 +1,6 @@
+package com.bb_score;
+
+import android.app.Activity;
+
+public class MainActivity extends Activity {
+}
