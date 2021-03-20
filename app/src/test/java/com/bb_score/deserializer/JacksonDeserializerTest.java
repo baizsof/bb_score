@@ -5,6 +5,7 @@ import com.bb_score.industry_facility.IndustryFacilityType;
 import com.bb_score.industry_facility.IndustryFacilityType.*;
 import com.bb_score.link.Link;
 import com.bb_score.location.Location;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

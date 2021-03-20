@@ -28,22 +28,6 @@ public class Location {
         this.slots = slots;
     }
 
-    public Map<Player, Integer> calculateLinkPoints() {
-        throw new UnsupportedOperationException();
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.N)
-    public Map<Player, Integer> calculateBasePoints() {
-        HashMap<Player, Integer> baseScores = new HashMap<>();
-        for (IndustryFacility industryFacility : industryFacilities) {
-            Player key = industryFacility.getOwner().get();
-            Optional<Integer> oldScore = Optional.ofNullable(baseScores.get(key));
-            oldScore = Optional.of(oldScore.orElse(0));
-            baseScores.put(key, oldScore.get() + industryFacility.getBasePoint());
-        }
-        return baseScores;
-    }
-
     public String getName() {
         return name;
     }

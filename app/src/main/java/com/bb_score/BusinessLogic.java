@@ -5,6 +5,7 @@ import androidx.annotation.RequiresApi;
 import com.bb_score.industry_facility.IndustryFacilitiesProvider;
 import com.bb_score.location.Location;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -26,7 +27,7 @@ public class BusinessLogic {
 
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.N)
+    @RequiresApi(api = Build.VERSION_CODES.O)
     private void loadAll(){
         loadIndustryFacilities();
         loadLinks();
@@ -46,8 +47,8 @@ public class BusinessLogic {
         throw new UnsupportedOperationException();
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.N)
+    @RequiresApi(api = Build.VERSION_CODES.O)
     private void loadIndustryFacilities(){
-        this.industryFacilitiesProvider = new IndustryFacilitiesProvider("industry_facilities.json");
+        this.industryFacilitiesProvider = new IndustryFacilitiesProvider(new File("industry_facilities.json"));
     }
 }

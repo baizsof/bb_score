@@ -22,6 +22,7 @@ public class JacksonDeserializer<T> implements Deserializer<T> {
     public JacksonDeserializer(File json, Class<T> genericType) {
         this.jsonContent = readFile(json);
         this.genericType = objectMapper.getTypeFactory().constructCollectionType(List.class, genericType);
+
     }
 
     public JacksonDeserializer(String jsonContent, Class<T> genericType) {
