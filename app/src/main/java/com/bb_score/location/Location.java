@@ -2,7 +2,6 @@ package com.bb_score.location;
 
 import android.os.Build;
 import androidx.annotation.RequiresApi;
-import com.bb_score.Player;
 import com.bb_score.exception.NoMoreIndustryFacilityPlaceAtLocationException;
 import com.bb_score.exception.NoOwnerAssignedException;
 import com.bb_score.exception.NoSuchIndustryFacilityTypeAtLocation;
@@ -81,6 +80,7 @@ public class Location {
         this.slots = slots;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -89,6 +89,7 @@ public class Location {
         return Objects.equals(name, location.name);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public int hashCode() {
         return Objects.hash(name);
