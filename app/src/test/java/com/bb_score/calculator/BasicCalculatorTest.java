@@ -1,7 +1,6 @@
 package com.bb_score.calculator;
 
 import com.bb_score.Player;
-import com.bb_score.calculator.BasicCalculator;
 import com.bb_score.exception.NoMoreIndustryFacilityPlaceAtLocationException;
 import com.bb_score.exception.NoOwnerAssignedException;
 import com.bb_score.exception.NoSuchIndustryFacilityTypeAtLocation;
@@ -10,7 +9,6 @@ import com.bb_score.industry_facility.IndustryFacility;
 import com.bb_score.industry_facility.IndustryFacilityType;
 import com.bb_score.location.Location;
 import com.bb_score.location.LocationsProvider;
-import dalvik.system.PathClassLoader;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -21,12 +19,12 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class BasicCalculatorTest {
 
     private HashMap<String, Location> usedLocations;
     BasicCalculator basicCalculator;
+    private final LocationsProvider locationsProvider = new LocationsProvider(new File("Locations.json"));
+    private final IndustryFacilitiesProvider industryFacilitiesProvider = new IndustryFacilitiesProvider(new File("IndustryFacility.json"));
 
     @Test
     void whenNullLocationIsGivenThenIllegalArgumentExceptionThrown() {
@@ -52,8 +50,6 @@ class BasicCalculatorTest {
 
     @Test
     void moreIndustriesInOneLocation() throws NoSuchIndustryFacilityTypeAtLocation, NoMoreIndustryFacilityPlaceAtLocationException, NoOwnerAssignedException {
-        LocationsProvider locationsProvider = new LocationsProvider(new File("Locations.json"));
-        IndustryFacilitiesProvider industryFacilitiesProvider = new IndustryFacilitiesProvider(new File("IndustryFacility.json"));
         IndustryFacility industryFacility = industryFacilitiesProvider.get("COAL_MINE_1");
         industryFacility.setOwner(Player.ORANGE);
         Location location = locationsProvider.get("COALBROOKDALE");
@@ -62,6 +58,26 @@ class BasicCalculatorTest {
         basicCalculator = new BasicCalculator(usedLocations, new HashSet<>());
         Map<Player, Integer> actual = basicCalculator.calculatePoints();
         Assertions.assertEquals(java.util.Optional.of(1).get(), actual.get((Player) Player.ORANGE));
+    }
+
+    @Test
+    void moreIndustriesInOneLocation2() throws NoSuchIndustryFacilityTypeAtLocation, NoMoreIndustryFacilityPlaceAtLocationException, NoOwnerAssignedException {
+        arrangeUsedLocations(new String[][]{{"COALBROOKDALE", "ORANGE", "COAL_MINE_1"}});
+        basicCalculator = new BasicCalculator(usedLocations, new HashSet<>());
+        Map<Player, Integer> actual = basicCalculator.calculatePoints();
+        Assertions.assertEquals(java.util.Optional.of(1).get(), actual.get((Player) Player.ORANGE));
+    }
+
+    private void arrangeUsedLocations(String[][] arr) throws NoMoreIndustryFacilityPlaceAtLocationException, NoOwnerAssignedException, NoSuchIndustryFacilityTypeAtLocation {
+        for (int i = 0; i < arr.length; i++) {
+            Location location = locationsProvider.get(arr[i][0]);
+            for (int j = 2; j < arr[i].length; j++) {
+                IndustryFacility industryFacility = industryFacilitiesProvider.get(arr[i][j]);
+                industryFacility.setOwner(Player.valueOf(arr[i][1]));
+                location.addIndustryFacility(industryFacility);
+                usedLocations.put(arr[i][0], location);
+            }
+        }
     }
 
     @BeforeEach
