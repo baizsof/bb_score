@@ -1,7 +1,8 @@
-package com.bb_score;
+package com.bb_score.calculator;
 
 import android.os.Build;
 import androidx.annotation.RequiresApi;
+import com.bb_score.Player;
 import com.bb_score.industry_facility.IndustryFacility;
 import com.bb_score.link.Link;
 import com.bb_score.location.Location;
